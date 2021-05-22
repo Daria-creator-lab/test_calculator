@@ -1,0 +1,12 @@
+function TestSqr()
+{
+  TestedApps.TestedApp.Run();
+  Aliases.Item.Calculator.button9.ClickButton();//нажатие "1"
+  Aliases.Item.Calculator.button7.ClickButton();//нажатие "6"
+  Aliases.Item.Calculator.button17.ClickButton();//нажатие "x^2"
+  var result = Aliases.Item.Calculator.WinFormsObject("textBox").Text;//вывод результата
+  if (result == "=256")
+    Log.Message("операция возведения в квадрат работает"); 
+  else 
+    Log.Message("операция возведения в квадрат НЕ работает");
+}
